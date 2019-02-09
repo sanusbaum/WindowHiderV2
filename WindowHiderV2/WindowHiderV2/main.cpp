@@ -1,3 +1,14 @@
+/*
+ * Author: Spencer Nusbaum
+ * File: main.cpp
+ * Last Updated: 2/8/2019
+ * Purpose: Prompts for either a basic or advanced mode of operation, then lists the
+ *     windows associated with the mode, and polls for selection IDs of windows to
+ *     toggle the visibility state on. Once a selection ID is gotten, the visibility of
+ *     the window changes from SHOW to HIDE or HIDE to SHOW. An option to exit the 
+ *     program is provided by a selection ID of 0.
+ */
+
 #include "ConsoleWindow.h"
 #include "EnumerateWindows.h"
 

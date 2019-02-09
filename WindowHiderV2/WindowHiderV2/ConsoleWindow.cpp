@@ -5,14 +5,14 @@
 
 void ConsoleWindow::writeLine(std::string string_)
 {
-	int consoleWindowWidth = getConsoleWindowWidth();
+	unsigned int consoleWindowWidth = getConsoleWindowWidth();
 
 	// Output the text to the screen with a border made of "| " and ending with " |"
 	std::cout << "| ";
 	std::cout << string_.substr(0, consoleWindowWidth - 4);
 	if (string_.length() < consoleWindowWidth - 4)
 	{
-		for (int whiteSpaceIndex = 0; whiteSpaceIndex < consoleWindowWidth - (string_.length() % (consoleWindowWidth - 4)) - 4; whiteSpaceIndex++)
+		for (unsigned int whiteSpaceIndex = 0; whiteSpaceIndex < consoleWindowWidth - (string_.length() % (consoleWindowWidth - 4)) - 4; whiteSpaceIndex++)
 		{
 			std::cout << " ";
 		}
@@ -58,7 +58,7 @@ std::string ConsoleWindow::getInput(std::string string_)
 	return input;
 }
 
-int ConsoleWindow::getConsoleWindowWidth()
+unsigned int ConsoleWindow::getConsoleWindowWidth()
 {
 	int columns = 0;
 
